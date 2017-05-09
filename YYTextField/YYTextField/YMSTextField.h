@@ -9,21 +9,24 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface YMSTextField : NSObject
+
+@property(nonatomic,strong)UITextField*textField;
+
 @property(nonatomic,copy)NSString*text;
 /**
  placeholder颜色
  */
-@property(nonatomic,strong)UIColor*textFiledPlaceholderColor;
-@property(nonatomic,assign)CGFloat textFiledFontSize;
+@property(nonatomic,strong)UIColor*textFieldPlaceholderColor;
+@property(nonatomic,assign)CGFloat textFieldFontSize;
 @property(nonatomic,assign)CGFloat cornerRadius;
 
 /**
- textFiled的背景颜色
+ textField的背景颜色
  */
-@property(nonatomic,strong)UIColor*textFiledBackgroundColor;
+@property(nonatomic,strong)UIColor*textFieldBackgroundColor;
 
 /**
- textFiled左视图
+ textField左视图
  */
 @property(nonatomic,strong)UIView*leftView;
 
@@ -35,7 +38,7 @@
 /**
  leftView 的左间距
  */
-@property(nonatomic,assign)CGFloat textFiledLeftViewLeftMargin;
+@property(nonatomic,assign)CGFloat textFieldLeftViewLeftMargin;
 
 /**
  监听输入文字
@@ -53,7 +56,7 @@
 
 
 /**
- 完全自定义textFiled
+ 完全自定义textField
  @param superView 要添加到的视图
  @param textFieldFrame frame
  @param textFieldLeftViewLeftMargin leftView左间距

@@ -7,9 +7,7 @@
 //
 
 #import "YMSTextField.h"
-@interface YMSTextField()<UITextViewDelegate>
-
-@property(nonatomic,strong)UITextField*textFiled;
+@interface YMSTextField()
 
 @end
 
@@ -17,9 +15,7 @@
 -(instancetype)init{
     if (self = [super init]) {
         //初始默认设置
-        self.textFiled = [UITextField new];
-        
-
+        self.textField = [UITextField new];
     }
     return self;
 }
@@ -30,39 +26,37 @@
      TextFieldPlacegolderColor:(UIColor*)textFieldPlaceholderColor
   TextFieldPlacegolderFontSize:(CGFloat)textFieldPlacegolderFontSize{
     
-    [superView addSubview:self.textFiled];
+    [superView addSubview:self.textField];
     
     //frame
-    self.textFiled.frame = textFieldFrame;
-    self.textFiled.placeholder = text;
+    self.textField.frame = textFieldFrame;
+    self.textField.placeholder = text;
     
     //placeHolder
-    [self.textFiled setValue:textFieldPlaceholderColor forKeyPath:@"_placeholderLabel.textColor"];
-    [self.textFiled setValue:[UIFont systemFontOfSize:textFieldPlacegolderFontSize]forKeyPath:@"_placeholderLabel.font"];
+    [self.textField setValue:textFieldPlaceholderColor forKeyPath:@"_placeholderLabel.textColor"];
+    [self.textField setValue:[UIFont systemFontOfSize:textFieldPlacegolderFontSize]forKeyPath:@"_placeholderLabel.font"];
     
   
 }
 
-
-
 -(void)addTextFieldToSuperView:(UIView*)superView TextFieldFrame:(CGRect)textFieldFrame
    TextFieldPlaceholderText:(NSString*)text TextFieldPlacegolderColor:(UIColor*)textFieldPlaceholderColor TextFieldPlacegolderFontSize:(CGFloat)textFieldPlacegolderFontSize TextFieldCornerRadius:(CGFloat)cornerRadius textFieldBackgroundColor:(UIColor*)textFieldBackgroundColor TextFieldLeftViewLeftMargin:(CGFloat)textFieldLeftViewLeftMargin LeftViewImageName:(NSString*)leftViewImageName{
     
-    [superView addSubview:self.textFiled];
+    [superView addSubview:self.textField];
     
     //frame
-    self.textFiled.frame = textFieldFrame;
-      self.textFiled.placeholder = text;
+    self.textField.frame = textFieldFrame;
+      self.textField.placeholder = text;
     
     //placeHolder
-    [self.textFiled setValue:textFieldPlaceholderColor forKeyPath:@"_placeholderLabel.textColor"];
-    [self.textFiled setValue:[UIFont systemFontOfSize:textFieldPlacegolderFontSize]forKeyPath:@"_placeholderLabel.font"];
+    [self.textField setValue:textFieldPlaceholderColor forKeyPath:@"_placeholderLabel.textColor"];
+    [self.textField setValue:[UIFont systemFontOfSize:textFieldPlacegolderFontSize]forKeyPath:@"_placeholderLabel.font"];
     
     //cornerRadius
-    self.textFiled.layer.cornerRadius = cornerRadius;
+    self.textField.layer.cornerRadius = cornerRadius;
     
     //color
-    self.textFiled.backgroundColor = textFieldBackgroundColor;
+    self.textField.backgroundColor = textFieldBackgroundColor;
     
     //leftView
     UIImage *im = [UIImage imageNamed:leftViewImageName];
@@ -70,8 +64,8 @@
     self.leftView = [[UIView alloc] initWithFrame:CGRectMake(textFieldLeftViewLeftMargin, 0, 45, 50)];
     iv.center = self.leftView.center;
     [self.leftView addSubview:iv];
-    self.textFiled.leftView = self.leftView;
-    self.textFiled.leftViewMode = UITextFieldViewModeAlways;
+    self.textField.leftView = self.leftView;
+    self.textField.leftViewMode = UITextFieldViewModeAlways;
     
 }
 
