@@ -100,12 +100,20 @@
 		4C6D9DA71EC1951500BEB855 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				4C6D9DA81EC1958000BEB855 /* YMSTextField.h */,
-				4C6D9DA91EC1958000BEB855 /* YMSTextField.m */,
+				4C6D9DAB1EC1A44B00BEB855 /* lib */,
 				4C6D9DA51EC1950400BEB855 /* View */,
 				4C6D9DA61EC1950D00BEB855 /* Controller */,
 			);
 			name = Demo;
+			sourceTree = "<group>";
+		};
+		4C6D9DAB1EC1A44B00BEB855 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4C6D9DA81EC1958000BEB855 /* YMSTextField.h */,
+				4C6D9DA91EC1958000BEB855 /* YMSTextField.m */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
