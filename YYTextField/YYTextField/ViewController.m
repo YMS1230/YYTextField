@@ -25,6 +25,10 @@
     
     _textField = textField;
     
+#pragma mark
+#pragma  mark block cycle
+    __weak UIViewController*weakSelf = self;
+    
     _textField.clickTextFieldBlock = ^(NSString *text) {
         NSLog(@"%@",text);
     };
