@@ -1,14 +1,19 @@
 # YYTextField 自定义TextFiled
 
-如何使用：
+# 如何使用：
 
- 1. 创建对象
+    # 创建对象
+	
     YMSTextField*textField = [YMSTextField new];
+	
     
- 2.简单自定义
+    # 简单自定义
+	
     [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 100, 200, 60) TextFieldPlaceholderText:@"请输入文字" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14];
+	
     
- 3.完全自定义
+    # 完全自定义
+	
     [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 300, 200, 60) TextFieldPlaceholderText:@"" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:30 textFieldBackgroundColor:[UIColor orangeColor] TextFieldLeftViewLeftMargin:15 LeftViewImageName:@""];
     
     
