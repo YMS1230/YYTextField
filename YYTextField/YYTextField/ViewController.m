@@ -21,7 +21,7 @@
     YMSTextField*textField = [YMSTextField new];
     
     //完全自定义
-    [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 30, 200, 40) TextFieldPlaceholderText:@"请输入文字" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:0 textFieldBackgroundColor:[UIColor orangeColor] TextFieldLeftViewLeftMargin:0 LeftViewImageName:@""];
+    [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 30, 200, 40) TextFieldPlaceholderText:@"请输入文字" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:0 textFieldBackgroundColor:[UIColor orangeColor] TextFieldLeftViewLeftMargin:2 LeftViewImageName:@"login_icon_mob"];
     
     _textField = textField;
     

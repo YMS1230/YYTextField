@@ -68,7 +68,7 @@
     self.textField.backgroundColor = textFieldBackgroundColor;
     
     //leftView
-    if (!leftViewImageName) {
+    if (leftViewImageName && textFieldLeftViewLeftMargin != 0) {
         UIImage *im = [UIImage imageNamed:leftViewImageName];
         UIImageView *iv = [[UIImageView alloc] initWithImage:im];
         self.leftView = [[UIView alloc] initWithFrame:CGRectMake(textFieldLeftViewLeftMargin, 0, 45, 50)];
