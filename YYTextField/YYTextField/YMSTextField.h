@@ -10,14 +10,22 @@
 #import <UIKit/UIKit.h>
 @interface YMSTextField : NSObject
 
-@property(nonatomic,strong)UITextField*textField;
+@property(nonatomic,weak)UITextField*textField;
 
 @property(nonatomic,copy)NSString*text;
 /**
  placeholder颜色
  */
 @property(nonatomic,strong)UIColor*textFieldPlaceholderColor;
+
+/**
+ 字体大小
+ */
 @property(nonatomic,assign)CGFloat textFieldFontSize;
+
+/**
+ 圆角
+ */
 @property(nonatomic,assign)CGFloat cornerRadius;
 
 /**

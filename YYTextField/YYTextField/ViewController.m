@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "YMSTextField.h"
 @interface ViewController ()
-
+@property(nonatomic,strong)YMSTextField*textField;
 @end
 
 @implementation ViewController
@@ -20,14 +20,18 @@
     //创建对象
     YMSTextField*textField = [YMSTextField new];
     
-    //简单自定义
-    [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 100, 200, 60) TextFieldPlaceholderText:@"请输入文字" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14];
-    
     //完全自定义
-    [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 300, 200, 60) TextFieldPlaceholderText:@"" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:30 textFieldBackgroundColor:[UIColor orangeColor] TextFieldLeftViewLeftMargin:15 LeftViewImageName:@""];
+    [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 30, 200, 40) TextFieldPlaceholderText:@"请输入文字" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:0 textFieldBackgroundColor:[UIColor orangeColor] TextFieldLeftViewLeftMargin:0 LeftViewImageName:@""];
     
-
+    _textField = textField;
+    
+    _textField.clickTextFieldBlock = ^(NSString *text) {
+        NSLog(@"%@",text);
+    };
+    
+    
 }
+
 
 
 @end
