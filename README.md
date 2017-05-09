@@ -2,16 +2,17 @@
 
 如何使用：
 
-1. //创建对象
+ 1. 创建对象
     YMSTextField*textField = [YMSTextField new];
     
- 2.//简单自定义
+ 2.简单自定义
     [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 100, 200, 60) TextFieldPlaceholderText:@"请输入文字" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14];
     
- 3.//完全自定义
+ 3.完全自定义
     [textField addTextFieldToSuperView:self.view TextFieldFrame:CGRectMake(0, 300, 200, 60) TextFieldPlaceholderText:@"" TextFieldPlacegolderColor:[UIColor grayColor] TextFieldPlacegolderFontSize:14 TextFieldCornerRadius:30 textFieldBackgroundColor:[UIColor orangeColor] TextFieldLeftViewLeftMargin:15 LeftViewImageName:@""];
     
-定义了两个方法,一种是全部自定义,另一种部分自定义,看需求.
+    
+# 定义了两个方法,一种是全部自定义,另一种部分自定义,看需求.
 
 参数介绍：
 superView                      要添加到的父视图
